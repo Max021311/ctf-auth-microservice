@@ -1,0 +1,21 @@
+{
+  "include": ["src/**/*"],
+  "extends": "@tsconfig/node16/tsconfig.json",
+  "compilerOptions": {
+    "module": "CommonJs",
+    "moduleResolution": "node",
+    "allowJs": true,
+    "checkJs": true,
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "importHelpers": true,
+    "declaration": true,
+    "declarationDir": "./dist/types",
+    "resolveJsonModule": true,
+    "sourceMap": true,
+    "baseUrl": "./",
+    "allowSyntheticDefaultImports": true,
+    "noImplicitAny": false,
+    "strict": true
+  }
+}

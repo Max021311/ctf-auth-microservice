@@ -1,0 +1,40 @@
+{
+  "name": "sem-db-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "concurrently \"npm run dev:watch\" \"npm run dev:serve\"",
+    "dev:watch": "tsc -w",
+    "dev:serve": "nodemon -w dist/ dist/index.js",
+    "lint": "eslint src"
+  },
+  "dependencies": {
+    "@fastify/cors": "^7.0.0",
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.0.0",
+    "fastify": "^3.28.0",
+    "http-errors": "^2.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "pg": "^8.7.3",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.19.0"
+  },
+  "devDependencies": {
+    "@tsconfig/node16": "^1.0.2",
+    "@types/bcrypt": "^5.0.2",
+    "@types/http-errors": "^1.8.2",
+    "@types/jsonwebtoken": "^9.0.6",
+    "@typescript-eslint/eslint-plugin": "^5.20.0",
+    "@typescript-eslint/parser": "^5.20.0",
+    "concurrently": "^7.1.0",
+    "eslint": "^8.13.0",
+    "nodemon": "^2.0.15",
+    "pino-pretty": "^7.6.1",
+    "sequelize-cli": "^6.4.1",
+    "ts-jest": "^28.0.2",
+    "typescript": "^4.6.3"
+  }
+}
