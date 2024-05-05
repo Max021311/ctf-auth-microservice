@@ -19,7 +19,7 @@ DB_SSL="true" # Por defecto es false
 PGSSLMODE="require" # En caso de necesitar SSL para conectarse a la BD, sino omitirlo
 SERVER_PORT="3010" # Por defecto 3010
 SECRET="loremipsum" # El secreto para firmar los tokens
-PREFIX="/api" # Server prefix
+PREFIX="/api/auth" # Server prefix
 ```
 
 ## Iniciar el repo para desarrollo
