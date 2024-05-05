@@ -13,7 +13,8 @@ const config = {
   host: DB_HOST || '127.0.0.1',
   port: DB_PORT || 5432,
   dialect: 'postgresql',
-  logging:  false
+  logging:  false,
+  ssl: process.env.DB_SSL === 'true'
 }
 
 module.exports = {
