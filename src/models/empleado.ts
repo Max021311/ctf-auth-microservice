@@ -1,9 +1,11 @@
 import { Sequelize, DataTypes, Model, InferAttributes, InferCreationAttributes } from 'sequelize'
 
-export type Attributes = InferAttributes<Empleado>
-export type CreationAttributes = InferCreationAttributes<Empleado>
 
-export class Empleado extends Model<Attributes, CreationAttributes>{
+export class Empleado extends Model<
+    // @ts-ignore
+  InferAttributes<Empleado>,
+  InferCreationAttributes<Empleado>
+>{
   declare codigo: number
   declare rfc: number
   declare nombre: string
@@ -19,10 +21,10 @@ export class Empleado extends Model<Attributes, CreationAttributes>{
 
 export default function (sequelize: Sequelize) {
   Empleado.init({
+    // @ts-ignore
     codigo: {
       type: DataTypes.INTEGER,
       primaryKey: true,
-      unique: true,
       autoIncrement: true,
       allowNull: false
     },

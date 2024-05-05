@@ -28,7 +28,7 @@ class JwtService {
         if (err) {
           const error = new Unauthorized('Invalid token')
           error.cause = err
-          return reject(err)
+          return reject(error)
         }
         resolve(decoded)
       })
